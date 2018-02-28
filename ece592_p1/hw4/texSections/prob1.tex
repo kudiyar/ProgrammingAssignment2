@@ -1,0 +1,41 @@
+\iffalse
+
+Nico Casale
+Cody Orazymbetov
+
+ECE 592 HW 4
+
+\fi
+
+\documentclass[]{../../ncmathy}
+
+\begin{document}
+\subsection{Comparison of methods}
+The distortion value for the different wavelet-based compression methods is given in the table below 
+
+	\begin{table}[H]
+	\centering\makegapedcells
+	\begin{tabular}{|| c c ||}
+	\hline
+	Compression Alg. & Distortion \\
+	\hline
+		ezw      &    25.681 \\
+		spiht    &    59.991 \\
+		stw      &   50.453 \\
+		wdr      &    25.681 \\
+		aswdr    &    25.681 \\ 
+		spiht\_3d &    314.79 \\
+		lvl\_mmc  &    76.358 \\ 
+		gbl\_mmc\_f&    3380.8 \\ 
+		gbl\_mmc\_h&    3380.8 \\
+	\hline
+	\end{tabular}
+	\caption{Distortion values of different wavelet-based compression algorithms.}
+	\end{table}
+
+The distortion value from our kmeans implementation for $P=2$, $R = 1$ is 50.22. The 'ezw', 'wdr', and 'aswdr' give the best, \textit{i.e.} lowest distortion values; all being equal to 25.681. 
+
+\subsection{Embedded Zerotree Wavelet (EZW) image compression}
+	In the embedded zerotree wavelet image compression (EZW), the discrete wavelet transform is accomplished using hierarchical sub-bands. Sub-bands will be logarithmically spaced. They are populated by applying filters to isolate each sub-band's frequencies from the original signal. Then, an image will be decomposed into wavelets. A zerotree (data structure) is used to map the the most significant wavelets. These efficiently encode the image. Zerotrees improve the compression of the original signal. A wavelet coefficient is regarded to be insignificant when $|x| < T $, where T is some threshold. The scanning of coefficients is performed starting from the parent; the child coefficient is insignificant if parent coefficient is insignificant. Then, a sequence of thresholds will be applied to determine the significance. The coding is accomplished in an embedded way, which means that there will be a sequence of binary decisions that enable the identification of an image from the null-image. The total cost of this approach is the sum of the cost of significance map and cost of non-zero values. It has 2 advantages over kmeans. EZW can precisely control the encoding rate, and no pre-training is required. It uses a discrete wavelet transform which is also a good to capture the important features, rather than clusters that do not carry much detail. Please see the final section for our code implementation of this experiment.
+
+\end{document}

@@ -1,0 +1,49 @@
+\iffalse
+
+Nico Casale
+Cody Orazymbetov
+
+ECE 592 HW 3
+
+\fi
+
+\documentclass[]{../../ncmathy}
+
+\begin{document}
+
+\subsection{(a) $n^2 + 100 n = \theta(n^2)$}
+
+For all $n>0$, $n^2 + 100n > 1* n^2$. Thus, $c_1 = 1$
+
+Let's say $c_2 = 2$. Then,
+$n^2 +100n\leq  2 n^2$
+
+$100n \leq n^2$
+
+$n \geq 100$
+
+$ 1 n^2 \leq n^2 + 100n \leq 2 n^2$ for all $N_0 \geq 100$
+
+\subsection{(b) $ (log(n))^3 = O(n)$}
+
+Let's say $N_0 \geq 10$. Then,
+
+$(log(10))^3 = c 10$
+
+$  c = \frac{1}{10}$, thus for all $N_0 \geq 10$
+
+$0 \leq log(n))^3 \leq \frac{1}{10} n$
+
+So $log(n)^3$ is on the order of $O(n)$.
+
+\subsection{(c) $n^{0.5} = \Omega((log(n))^3)$}
+
+For $N_0 \geq 10000$, $ c*(log(10000))^3 = \sqrt{(10000)}$
+
+$64 c = 100$, then $c = \frac{100}{64}$. 
+
+$0 \leq \frac{100}{64} (log(n))^3 \leq n^{0.5}$ for all $N_0 \geq 10000$
+
+
+
+\end{document}

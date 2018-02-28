@@ -1,0 +1,51 @@
+\iffalse
+
+Nico Casale
+Cody Orazymbetov
+
+ECE 592 HW 4
+
+\fi
+
+\documentclass[]{../ncmathy}
+
+\rhead{korazym, ncasale}
+\lhead{ECE 592 HW 4}
+\cfoot{\thepage}
+
+\begin{document}
+
+\title{ECE 592 Homework 4}
+\author{Kudiyar Orazymbetov (korazym@ncsu.edu)\\Nico Casale (ncasale@ncsu.edu)}
+\maketitle
+
+\textit{Note that the entries are links.}
+\tableofcontents
+\listoffigures
+%\listoftables
+\lstlistoflistings
+
+\pagebreak
+
+\section{Wavelet Experiment}
+	\subfile{texSections/prob1}
+
+\pagebreak
+\section{AMP Implementation}
+	\subfile{texSections/prob2}
+	
+\pagebreak
+\section{Code Listings}
+	
+	\subsection{Main Code for Problem 1}
+		\lstinputlisting[language=Matlab, caption=Code to calculate distortion with different wavelet-based methods.]{code/pr1.m}
+
+	\subsection{Main Code for Problem 2}
+		\lstinputlisting[language=Matlab, caption=Code to solve Problem 2.]{code/pr2.m}
+
+	\subsection{Supporting Functions for Problem 2}
+		\lstinputlisting[language=Matlab, caption=AMP implementation.]{code/AMP.m}
+		\lstinputlisting[language=Matlab, caption=AMP Denoising Function.]{code/denoise.m}
+		\lstinputlisting[language=Matlab, caption=Linear Programming Implementation.]{code/sim_linprog.m}
+
+\end{document}

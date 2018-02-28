@@ -1,0 +1,52 @@
+\iffalse
+
+Nico Casale
+Cody Orazymbetov
+
+ECE 592 HW 3
+
+\fi
+
+\documentclass[]{../../ncmathy}
+
+\begin{document}
+	The following function represents the runtime of a sub-problem:
+
+	\begin{equation}
+		T(n) = 
+		\begin{cases} 
+	      2 & n = 2 \\
+	      2T(\frac{n}{2}) + n & n = 2^k, \ k > 1 
+	   \end{cases}	
+	\end{equation}
+	
+	To show that $T(n) = n\times log_2(n)$, we use mathematical induction.
+
+	\subsection{Basis Case}
+		We start with two basis cases, for $k = 1,2$. 
+		\\\\
+		\underline{$k = 1$:} $T(2) = 2 = 2log_2(2) = 2$. Thus the relation holds for $k = 1$.
+		\\\\
+		\underline{$k = 2$:} $T(4) = 2T(2) + 4 = 4 + 4 = 8 = 4log_2(4) = 8$. Thus the relation holds for $k = 2$.
+		
+	\subsection{Inductive Hypothesis}
+		Given that the basis case holds for small values of $n$, we hypothesize that the relationship holds for $T(2^k)$ where $k = K$.
+		
+	\subsection{Inductive Step}
+		Assuming that the hypothesis holds, then it should also hold for $k = K + 1$. 
+		\\\\
+		\underline{$k = K + 1$:} 
+		\begin{align*}
+			T(2^{K+1}) &= 2T(\frac{2^{K+1}}{2}) + 2^{K+1}\\
+			&= 2T(2^{K}) + 2^{K+1}\\
+			&= 2(2T(2^{K-1}) + 2^K) + 2^{K+1}\\
+			&= 2^2T(2^{K-1}) + 2*2^{K+1}\\
+			&\text{Note that this proceeds recursively until $T(2)$ is reached}\\
+			&= 2^KT(2) + (K)2^{K+1}\\
+			&= (K+1)2^{K+1} = (2^{K+1})log_2(2^{K+1}) = (2^{K+1})(K+1)
+			\numberthis
+		\end{align*}
+		
+		We've shown that the relationship holds for $k = K+1$, so it must hold for any positive integer $k$ that $T(n=2^k) = n\times log_2(n)$.
+		
+\end{document}

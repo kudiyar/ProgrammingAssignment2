@@ -1,0 +1,61 @@
+\iffalse
+
+Nico Casale
+Cody Orazymbetov
+
+ECE 592 Project 1
+
+\fi
+
+\documentclass[]{ncmathy}
+
+\rhead{ncasale, korazym}
+\lhead{ECE 592 HW 1}
+\cfoot{\thepage}
+
+\begin{document}
+
+\title{ECE 592 Project 1}
+\author{Kudiyar Orazymbetov (korazym@ncsu.edu)\\Nico Casale (ncasale@ncsu.edu)}
+\makeTitlePage
+
+\textit{Note that the entries are links.}
+\tableofcontents
+\listoftables
+\listoffigures
+\lstlistoflistings
+
+\pagebreak
+
+\section{Introduction}
+	
+	\subfile{texSections/intro}
+	
+\subfile{texSections/parts2through5}
+
+\section{Additional Direction: MATLAB implementation of K-Means}
+
+	\subfile{texSections/kmeans}
+
+\section{Conclusion}
+	In conclusion, we have found that it is possible to compress an image using clustering algorithms such as \textit{k-means}. The quality of the reconstruction is dependent on the patch size $P$ and the number of clusters $C$ (\code{K} in our MATLAB code.) There is also a reasonable level of additional compression that could be added if we used entropy coding to represent more common clusters with less bits. Finally, we have seen that a capable implementation of \textit{k-means} is possible and not especially complex.
+
+\pagebreak
+
+\section{Appendix A: Code Listings}
+	
+	\subsection{Code for Parts 2-5 of the Project}
+		\subsubsection{\code{mainCode.m}}
+			\lstinputlisting[language=Matlab, caption=Code to solve parts 2-5 of the Project.]{code/mainCode.m}
+
+	\subsection{Code for our implementation of K-means}
+		\subsubsection{\code{compare\_Kmeans.m}}
+			\lstinputlisting[language=Matlab, caption=Code to compare our implementations of \textit{k-means}.]{code/kmeans/compare_Kmeans.m}
+		\subsubsection{\code{kmeans\_alt.m}}
+			\lstinputlisting[language=Matlab, caption=Our implementation of \textit{k-means}.]{code/kmeans/kmeans_alt.m}
+		\subsubsection{\code{assignmentStep.m}}
+			\lstinputlisting[language=Matlab, caption=Helper function for \code{kmeans\_alt(.)}.]{code/kmeans/assignmentStep.m}
+		\subsubsection{\code{updateStep.m}}
+			\lstinputlisting[language=Matlab, caption=Helper function for \code{kmeans\_alt(.)}.]{code/kmeans/updateStep.m}
+
+\end{document}

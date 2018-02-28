@@ -1,0 +1,38 @@
+\iffalse
+
+Nico Casale
+Cody Orazymbetov
+
+ECE 592 HW 3
+
+\fi
+
+\documentclass[]{../../ncmathy}
+
+\begin{document}
+
+\subsection{Dijkstra's Algorithm}
+
+	\begin{tabular}{lllllll}
+		v  & A  & B & C & D & E & F         \\
+		A  & $0_a$ & $3_a$ & $5_a$ & $9_a$ & $inf_a$ & $inf_a$  \\
+		B  & $0_a$ & $3_a$  & $5_a$ & $7_b$ & $10_b$ & $inf_a$\\
+		C  & $0_a$ & $3_a$  & $5_a$ & $7_c$ & $10_b$ & $inf_c$   \\
+		B  & $0_a$ & $3_a$  & $5_a$ & $7_b$ & $9_d$ & $9_d$   \\
+		C  & $0_a$ & $3_a$  & $5_a$ & $7_c$ & $9_d$ & $9_d$ \\
+	\end{tabular}
+	\\\\
+	The bottom two rows indicate that the shortest paths are $p_1 = {A, B, D, F}$ and $p_2 = {A, C, D, F}$. 
+
+\subsection{Bellman-Ford Algorithm}
+
+
+\begin{tabular}{llllllll}
+	B & A & C & D & E & F \\
+	0 & 3 & 3 & 4 & 7 & 6 & $\rightarrow$ & iteration 1 \\
+	0 & 3 & 3 & 4 & 6 & 6 & $\rightarrow$ & iteration 2
+\end{tabular}
+\\\\
+Note that this algorithm `runs' faster than Dijkstra's Algorithm.
+
+\end{document}

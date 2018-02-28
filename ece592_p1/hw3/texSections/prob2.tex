@@ -1,0 +1,24 @@
+\iffalse
+
+Nico Casale
+Cody Orazymbetov
+
+ECE 592 HW 3
+
+\fi
+
+\documentclass[]{../../ncmathy}
+
+\begin{document}
+
+\subsection{(a) Linear Time Search}
+	\lstinputlisting[language=Matlab, caption=Pseudocode to search through a list of values.]{code/pr2.m}
+
+\subsection{(b) Elements Accessed}
+On average we will have $\frac{N+1}{2}$ elements to be searched because $1 \leq index \leq N$ since they are equally likely to appear the mean will be $\frac{1+N}{2} $. The worst case will be $\mathcal{O}(N)$, or N, in which case the algorithm has to iterate through all elements in order to find the value. Both the average and worst cases will have $\Theta(N)$ as both depend on $N$.
+
+\subsection{(c) Alternate Data Structure}
+An alternate data structure that would provide fast searches would be a sorted array that's pre-allocated in memory. The complexity of an individual search through a sorted list is$O(log(N))$. The search would be completed by recursively choosing the middle element of sub-vectors of the array. When the value is larger than the middle element, the search algorithm would choose the center of the elements to the right of the original middle element. If the value being sought was smaller, the algorithm would search through the left sub-array. It would proceed recursively until the element was found.
+\\\\
+Note that there is a set-up cost to sorting the list. The complexity of sorting is $O(N log(N))$. But this is an up-front cost that wouldn't be nearly as expensive as using linear time searches from the beginning. In addition, insert sort could be used to add or remove elements from the already sorted list quickly.
+\end{document}

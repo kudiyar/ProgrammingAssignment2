@@ -1,0 +1,54 @@
+\iffalse
+
+Nico Casale
+Cody Orazymbetov
+
+ECE 592 HW 5
+
+\fi
+
+\documentclass[]{../ncmathy}
+
+\rhead{korazym, ncasale}
+\lhead{ECE 592 HW 5}
+\cfoot{\thepage}
+
+% print images boolean
+\newcommand{\printCode}{\BooleanFalse}
+
+\begin{document}
+
+\title{ECE 592 Homework 5}
+\author{Kudiyar Orazymbetov (korazym@ncsu.edu)\\Nico Casale (ncasale@ncsu.edu)}
+\maketitle
+
+\tableofcontents
+\listoffigures
+%\listoftables
+\lstlistoflistings
+
+\pagebreak
+
+\section{Rod Cutting Problem}
+	\subfile{texSections/prob1}
+
+\pagebreak
+\section{Comparison of Line Search and Golden Section Search}
+	\subfile{texSections/prob2}
+	
+\pagebreak
+\section{Code Listings}
+	
+	
+		\subsection{Main Code for Problem 2}
+		\lstinputlisting[language=Matlab, caption=Main code which will address parts a to d]{code/pr1.m}
+		
+		\subsection{Main Code for Problem 2}
+		\lstinputlisting[language=Matlab, caption=Code to find best profit given length n]{code/price2.m}
+		
+		\subsection{Main Code for Problem 2}
+			\lstinputlisting[language=Matlab, caption=Code to measure performance of line search and golden section search.]{code/pr2.m}
+
+	
+
+\end{document}

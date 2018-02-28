@@ -1,0 +1,68 @@
+\iffalse
+
+Nico Casale
+Cody Orazymbetov
+
+ECE 592 Project 2
+
+\fi
+
+\documentclass[]{../ncmathy}
+
+\rhead{ncasale, korazym}
+\lhead{ECE 592 Project 2}
+\cfoot{\thepage}
+
+\begin{document}
+
+\title{ECE 592 Project 2}
+\author{Kudiyar Orazymbetov (korazym@ncsu.edu)\\Nico Casale (ncasale@ncsu.edu)}
+\makeTitlePage
+
+\textit{Note that the entries are links.}
+\tableofcontents
+\listoftables
+\listoffigures
+\lstlistoflistings
+
+\pagebreak
+
+\section{Introduction}
+	
+	\subfile{texSections/intro}
+	
+\section{Dijkstra's Algorithm - Results}
+
+	\subfile{texSections/dijkstra}
+	\pagebreak
+	
+\section{Dijkstra's Algorithm - Analysis}
+
+	\subfile{texSections/analysisDijkstra}
+
+\section{A* Algorithm - Analysis}
+
+	\subfile{texSections/analysisAstar}
+	%\pagebreak
+
+\section{Conclusion}
+
+	\subfile{texSections/conclusion}
+
+\pagebreak
+
+\section{Appendix A: Code Listings}
+	
+	\subsection{Main Code: \code{project2.m}}
+		\lstinputlisting[language=Matlab, caption=Main code that simulates the project.]{code/project2.m}
+	
+	\subsection{Helper Function: \code{retrieveData.m}}
+		\lstinputlisting[language=Matlab, caption=Function to read the data file.]{code/retrieveData.m}
+	
+	\subsection{Dijkstra's Algorithm: \code{dijkstra.m}}
+		\lstinputlisting[language=Matlab, caption=Function to execute Dijkstra's Algorithm.]{code/dijkstra.m}
+		
+	\subsection{A* Algorithm: \code{heuristicCostFunction.m} and \code{Astar.m}}
+		\lstinputlisting[language=Matlab, caption=Helper function to A*.]{code/heuristicCostFunction.m}
+		\lstinputlisting[language=Matlab, caption=Function to execute the A* Algorithm.]{code/Astar.m}
+\end{document}

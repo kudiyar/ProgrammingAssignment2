@@ -1,0 +1,55 @@
+\iffalse
+
+Nico Casale
+Cody Orazymbetov
+Chekad Sarami
+
+ECE 592 Project 1
+
+\fi
+
+\documentclass[]{../ncmathy}
+
+\rhead{csarami, korazym, ncasale}
+\lhead{ECE 592 HW 1}
+\cfoot{\thepage}
+
+% to insert pdf
+\usepackage[final]{pdfpages}
+\setboolean{@twoside}{false}
+
+
+\begin{document}
+
+\title{ECE 592 Homework 2}
+\author{Chekad Sarami (csarami@ncsu.edu)\\Kudiyar Orazymbetov (korazym@ncsu.edu)\\Nico Casale (ncasale@ncsu.edu)}
+\maketitle
+
+\textit{Note that the entries are links.}
+\tableofcontents
+\listoffigures
+\lstlistoflistings
+
+\pagebreak
+
+\section{Problem 1: Bayesian Classification}
+
+	\subfile{texSections/prob1}
+
+\pagebreak
+
+	%\subfile{texSections/prob2}
+	\includepdf[pages=-, offset=0 0]{hw2-problem2.pdf}
+
+\pagebreak
+
+\section{Appendix A: Code Listings}
+	\subsection{Code for Problem 1.c}
+	\subsubsection{\code{Hw2\_Pr1.m}}
+	\lstinputlisting[language=Matlab, caption=Code to solve problem 1.c.]{code/Hw2_Pr1.m}
+	
+	\subsection{Code for Problem 1.d}
+		\subsubsection{\code{hw2\_1d.m}}
+			\lstinputlisting[language=Matlab, caption=Code to solve problem 1.d.]{code/hw2_1d.m}
+
+\end{document}
